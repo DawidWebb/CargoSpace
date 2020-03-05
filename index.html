@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wykorzystaj przestrzeń ładunkową</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header></header>
+      <section>
+        <div class="data">
+          <label for="quantity1">Szerokość palety / elemetu:</label>
+          <select id="quantity1">
+            <option value="60">60</option>
+            <option value="80">80</option>
+            <option value="100">100</option>
+            <option value="120">120</option>
+          </select>
+          <label for="quantity2">Długość palety / elemetu:</label>
+          <select id="quantity2">
+            <option value="40">40</option>
+            <option value="60">60</option>
+            <option value="80">80</option>
+            <option value="100">100</option>
+            <option value="120">120</option>
+          </select>
+          <label for="quantity3">Wyskość palety / elemetu:</label>
+          <select id="quantity3">
+            <option value="80">80</option>
+            <option value="130">130</option>
+            <option value="150">150</option>
+            <option value="270">270</option>
+          </select>
+          <label for="quantity4">Ilość (pomiędzy 1 a 33):</label>
+          <input
+            type = "number"
+            id="quantity4"
+            name="quantity4"
+            min="1"
+            max="33"
+          />
+          <label for="quantity5">Zaznacz jeżeli można piętrować:</label>
+          <input type="checkbox" id="quantity5" name="quantity5" />
+        </div>
+        <div class="btns">
+          <Button id="add">Dodaj</Button>
+          <Button id="calk">Przelicz</Button>
+          <Button id="clear">Wyczyść</Button>
+        </div>
+        <div class="info">
+          <p id="quantity">Załadowałeś:</p>
+          <p id="free">Pozostało miejsca:</p>
+         
+        </div>
+      </section>
+      <footer></footer>
+    
+    <script src="Add.js"></script>
+    <script src="Data.js"></script>
+    <script src="Calc.js"></script>
+   
+    
+  </body>
+</html>

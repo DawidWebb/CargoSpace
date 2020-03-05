@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(1, 1, 1, 0.9);
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.wrapper {
+  max-width: 1600px;
+  max-height: 100vh;
+  margin: auto;
+}
+header {
+  max-width: 100%;
+  height: 10vh;
+}
+section {
+  width: 90%;
+  height: 80vh;
+  margin: 30px;
+  display: flex;
+}
+.data,
+.info {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.btns {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+label {
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+}
+select {
+  margin-top: 10px;
+  flex-basis: 5%;
+  color: white;
+  width: 60px;
+  height: 10px;
+  font-size: 18px;
+}
+input {
+  margin-top: 10px;
+  flex-basis: 5%;
+  color: white;
+  width: 60px;
+  height: 10px;
+  font-size: 18px;
+}
+#quantity,
+#free {
+  margin: 20px;
+  color: white;
+  font-size: 18px;
+}
+#quanity li button {
+  color: white;
+}
+.delete {
+  font-size: 16px;
+  color: white;
+  background-color: red;
+  padding: 4px 6px;
+  margin-left: 10px;
+}
+
+#add {
+  margin-top: 40px;
+  padding: 10px;
+  width: 120px;
+  color: white;
+  background-color: green;
+  font-size: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#add:hover {
+  background-color: yellowgreen;
+}
+#calk,
+#clear {
+  margin-top: 40px;
+  padding: 10px;
+  width: 120px;
+  color: white;
+  font-size: 20px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+#calk:hover,
+#clear:hover {
+  background-color: white;
+  color: black;
+}
