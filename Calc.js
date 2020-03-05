@@ -17,18 +17,28 @@ class Calc extends Data {
     const dimension = this.dimensions.slice(-1);
     const { id, dim1, dim2, dim3, dim4 } = dimension[0];
 
-    const calc = (this.totalLenght - dim1 * dim4) / 100;
-    this.totalLdm - calc;
-    console.log(this.calcDimensions);
+    const calcLdm = (dim1 * dim2 * dim4) / 10000 / this.tolatWidth;
+
+    this.calcLdm.push(calcLdm);
+
+    this.leftLdm();
 
     this.render(calc);
-    this.clear();
   }
+
+  leftLdm = () => {
+    if (this.calcLdm.length === 1) {
+      const calc = this.totalLdm - this.calcLdm[0];
+    } else {
+      // const calc = this.totalLdm - this.totalLenght;
+    }
+
+    this.render(calc);
+  };
 
   render = calc => {
     free.textContent = `Pozostało wolnych: ${calc} ldm (czyli około ${calc /
       0.4} euro palet)`;
   };
-  clear = () => {};
 }
 const calc = new Calc();
