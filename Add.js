@@ -20,8 +20,6 @@ class Add {
 
     this.dimensions.push(dimension);
 
-    console.log(this.dimensions);
-
     if (quantity4.value >= 1) {
       this.li = document.createElement("li");
       this.li.innerHTML = `${quantity4.value} palet,  o wymiarach ${quantity1.value} * ${quantity2.value}  <button>Usuń</button>`;
@@ -50,6 +48,4 @@ class Add {
 
     this.render();
   };
-
-  reset = () => {};
 }

@@ -8,5 +8,17 @@ class Data extends Add {
     this.totalLdm = 13.6;
     this.doubleStock = false;
     this.calcLdm = [];
+    document
+      .getElementById("clear")
+      .addEventListener("click", this.clearAll.bind(this));
+    document.getElementById("free");
+  }
+
+  clearAll() {
+    this.totalLdm = 13.6;
+    this.doubleStock = false;
+    this.calcLdm = [];
+    quantity.innerHTML = `<p>Załadowałeś:</p>`;
+    free.innerHTML = `   <p>Pozostało miejsca:</p>`;
   }
 }

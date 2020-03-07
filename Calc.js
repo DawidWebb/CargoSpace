@@ -22,14 +22,16 @@ class Calc extends Data {
     this.calcLdm.push(calcLdm);
 
     this.leftLdm();
-
-    this.render(calc);
   }
 
   leftLdm = () => {
     const calcLdm = this.totalLdm - this.calcLdm.slice(-1);
-    free.textContent = `Pozostało wolnych: ${calcLdm} ldm (czyli około ${calcLdm /
-      0.4} euro palet)`;
+    free.textContent = `Pozostało wolnych: ${Math.round(
+      calcLdm
+    )} ldm (czyli około ${Math.round(calcLdm / 0.4)} euro palet)`;
+
+    this.totalLdm = calcLdm;
+    console.log(this.totalLdm);
   };
 
   render = () => {};
