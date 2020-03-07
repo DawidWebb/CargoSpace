@@ -27,18 +27,11 @@ class Calc extends Data {
   }
 
   leftLdm = () => {
-    if (this.calcLdm.length === 1) {
-      const calc = this.totalLdm - this.calcLdm[0];
-    } else {
-      // const calc = this.totalLdm - this.totalLenght;
-    }
-
-    this.render(calc);
-  };
-
-  render = calc => {
-    free.textContent = `Pozostało wolnych: ${calc} ldm (czyli około ${calc /
+    const calcLdm = this.totalLdm - this.calcLdm.slice(-1);
+    free.textContent = `Pozostało wolnych: ${calcLdm} ldm (czyli około ${calcLdm /
       0.4} euro palet)`;
   };
+
+  render = () => {};
 }
 const calc = new Calc();
