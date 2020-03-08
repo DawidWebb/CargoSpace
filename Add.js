@@ -10,20 +10,20 @@ class Add {
     document.getElementById("clear").addEventListener("click", this.reset);
   }
   addData() {
-    const dimension = {
-      id: this.dimensions.length,
-      dim1: quantity1.value,
-      dim2: quantity2.value,
-      dim3: quantity3.value,
-      dim4: quantity4.value
-    };
-
-    this.dimensions.push(dimension);
-
     if (quantity4.value >= 1) {
-      this.li = document.createElement("li");
-      this.li.innerHTML = `${quantity4.value} palet,  o wymiarach ${quantity1.value} * ${quantity2.value}  <button>Usuń</button>`;
+      const dimension = {
+        id: this.dimensions.length,
+        dim1: quantity1.value,
+        dim2: quantity2.value,
+        dim3: quantity3.value,
+        dim4: quantity4.value
+      };
 
+      this.dimensions.push(dimension);
+      console.log(this.dimensions);
+
+      this.li = document.createElement("li");
+      this.li.innerHTML = `${quantity4.value} palet,  o wymiarach ${quantity1.value} * ${quantity2.value} <button>Usuń</button>`;
       this.render();
 
       quantity.appendChild(this.li);

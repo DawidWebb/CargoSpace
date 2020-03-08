@@ -57,8 +57,13 @@ input {
   color: white;
   font-size: 18px;
 }
-#quanity li button {
+#quantity li button {
   color: white;
+  padding: 3px 7px;
+  transition: 0.2s;
+}
+#quantity li button:hover {
+  background-color: red;
 }
 .delete {
   font-size: 16px;
