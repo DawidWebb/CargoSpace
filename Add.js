@@ -24,15 +24,13 @@ class Add {
 
       this.li = document.createElement("li");
       this.li.innerHTML = `${quantity4.value} palet,  o wymiarach ${quantity1.value} * ${quantity2.value} <button>Usuń</button>`;
-      this.render();
-
       quantity.appendChild(this.li);
-
-      this.li.addEventListener("click", this.delete);
+      this.render();
     } else {
       alert("Podaj wymagane wymiary...");
     }
   }
+
   render = () => {
     this.li.textContent = "";
     this.dimensions.forEach((dimension, key) => {
@@ -45,7 +43,5 @@ class Add {
     e.target.parentNode.remove();
     const index = e.target.parentNode.dataset.key;
     this.dimensions.splice(index, 1);
-
-    this.render();
   };
 }

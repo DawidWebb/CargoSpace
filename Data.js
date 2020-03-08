@@ -12,9 +12,6 @@ class Data extends Add {
       .getElementById("clear")
       .addEventListener("click", this.clearAll.bind(this));
     document.getElementById("free");
-    // document
-    //   .querySelector("#quantity li button")
-    //   .addEventListener("click", this.deleteOne.bind(this));
   }
 
   clearAll() {
@@ -23,9 +20,5 @@ class Data extends Add {
     this.calcLdm = [];
     quantity.innerHTML = `<p>Załadowałeś:</p>`;
     free.innerHTML = `   <p>Pozostało miejsca:</p>`;
-  }
-
-  deleteOne() {
-    console.log("ok");
   }
 }
