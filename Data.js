@@ -18,6 +18,7 @@ class Data extends Add {
     this.totalLdm = 13.6;
     this.doubleStock = false;
     this.calcLdm = [];
+    this.dimensions = [];
     quantity.innerHTML = `<p>Załadowałeś:</p>`;
     free.innerHTML = `   <p>Pozostało miejsca:</p>`;
   }

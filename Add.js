@@ -22,11 +22,9 @@ class Add {
       console.log(this.dimensions);
 
       this.li = document.createElement("li");
-      this.li.classList.add(this.dimensions.length);
-      let id = this.li.classList.value;
+      this.li.classList.add(this.dimensions.length - 1);
       this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2} <button>Usuń</button>`;
       quantity.appendChild(this.li);
-      console.log(id);
 
       this.remove();
     } else {
@@ -41,7 +39,9 @@ class Add {
   };
 
   delete = e => {
-    console.log("OK");
     e.target.parentNode.remove();
+    const ids = e.target.parentNode.classList.value;
+    this.dimensions.splice(ids, 1);
+    console.log(this.dimensions);
   };
 }
