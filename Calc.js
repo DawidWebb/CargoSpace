@@ -7,19 +7,25 @@ class Calc extends Data {
     document
       .getElementById("calk")
       .addEventListener("click", this.btnHandling.bind(this));
-    document.getElementById("free");
   }
-  checkQuantity = () => {
-    // return this.dimensions[{ dim2 }] * this.dimensions[{ dim4 }];
-  };
 
   btnHandling() {
-    const dimension = this.dimensions.slice(-1);
-    const { id, dim1, dim2, dim3, dim4 } = dimension[0];
+    // for (let i = 0; i < this.dimensions.lenght; i++) {
+    //   this.calcLdm =
+    //     (this.dimensions[i].dim1 *
+    //       this.dimensions[i].dim2 *
+    //       this.dimensions[i].dim4) /
+    //     10000 /
+    //     2.4;
+    // }
+    // const i = this.dimensions[{}];
+    // const dim1 = this.dimensions[{ dim1 }];
+    // const dim2 = this.dimensions[{ dim2 }];
+    // const dim4 = this.dimensions[{ dim4 }];
 
-    const calcLdm = (dim1 * dim2 * dim4) / 10000 / this.tolatWidth;
+    // const calcLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
 
-    this.calcLdm.push(calcLdm);
+    // this.dimensions.forEach(i => (i = this.calcLdm.push(calcLdm)));
 
     this.leftLdm();
   }
