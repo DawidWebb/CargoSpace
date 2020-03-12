@@ -1,7 +1,7 @@
 class Add {
   constructor() {
     this.dimensions = [];
-
+    this.calcLdm = [];
     this.li = this.li;
     document
       .getElementById("add")
@@ -42,6 +42,7 @@ class Add {
     e.target.parentNode.remove();
     const ids = e.target.parentNode.classList.value;
     this.dimensions.splice(ids, 1);
-    console.log(this.dimensions);
+    this.calcLdm.splice(ids, 1);
+    console.log("DIM", this.dimensions);
   };
 }

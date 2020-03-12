@@ -7,7 +7,7 @@ class Data extends Add {
     this.totalHeight = 275;
     this.totalLdm = 13.6;
     this.doubleStock = false;
-    this.calcLdm = [];
+
     document
       .getElementById("clear")
       .addEventListener("click", this.clearAll.bind(this));
