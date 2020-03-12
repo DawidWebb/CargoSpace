@@ -10,24 +10,10 @@ class Calc extends Data {
   }
 
   btnHandling() {
-    this.dimensions.forEach(element => {
-      const { dim1, dim2, dim3, dim4 } = element;
-      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
-      this.calcLdm.push(actualLdm);
-      console.log(this.calcLdm);
-    });
     this.leftLdm();
   }
 
-  leftLdm = () => {
-    const calcLdm = this.totalLdm - this.calcLdm.slice(-1);
-    free.textContent = `Pozostało wolnych: ${Math.round(
-      calcLdm
-    )} ldm (czyli około ${Math.round(calcLdm / 0.4)} euro palet)`;
-
-    this.totalLdm = calcLdm;
-    console.log(this.totalLdm);
-  };
+  leftLdm = () => {};
 
   render = () => {};
 }

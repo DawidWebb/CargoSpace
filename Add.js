@@ -19,7 +19,6 @@ class Add {
       };
 
       this.dimensions.push(dimension);
-      console.log(this.dimensions);
 
       this.li = document.createElement("li");
       this.li.classList.add(this.dimensions.length - 1);
@@ -30,8 +29,15 @@ class Add {
     } else {
       alert("Podaj wymagane wymiary...");
     }
-  }
+    this.dimensions.forEach(element => {
+      const { dim1, dim2, dim3, dim4 } = element;
+      let actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
+      this.calcLdm.push(actualLdm);
+      console.log(actualLdm);
 
+      console.log(this.calcLdm);
+    });
+  }
   remove = () => {
     document
       .querySelectorAll("li button")
@@ -43,6 +49,9 @@ class Add {
     const ids = e.target.parentNode.classList.value;
     this.dimensions.splice(ids, 1);
     this.calcLdm.splice(ids, 1);
-    console.log("DIM", this.dimensions);
+    console.log(e.target.parentNode.classList.value);
+
+    console.log("DEL", this.dimensions);
+    console.log("DEL", this.calcLdm);
   };
 }
