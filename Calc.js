@@ -19,8 +19,15 @@ class Calc extends Data {
   }
 
   leftLdm = leftLdm => {
-    freeSpan.textContent = `${leftLdm} Ldm `;
-    freeSpan2.textContent = `To około ${Math.floor(leftLdm / 0.4)} palet euro`;
+    if (this.calcLdm > 0) {
+      freeSpan.textContent = `${leftLdm.toFixed(2)} Ldm `;
+      freeSpan2.textContent = `To około ${Math.floor(
+        leftLdm / 0.4
+      )} palet euro`;
+    } else {
+      freeSpan.textContent = `13,6Ldm `;
+      freeSpan2.textContent = `To około 33 palet euro`;
+    }
   };
 }
 const calc = new Calc();
