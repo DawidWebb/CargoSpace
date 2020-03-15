@@ -13,8 +13,5 @@ class Remove {
     this.dimensions.splice(ids, 1);
     this.calcLdm.splice(ids, 1);
     console.log(e.target.parentNode.classList.value);
-
-    console.log("DEL Dim.", this.dimensions);
-    console.log("DEL Ldm", this.calcLdm);
   };
 }

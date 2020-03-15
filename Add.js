@@ -2,8 +2,8 @@ class Add extends Remove {
   constructor(props) {
     super(props);
     this.dimensions = [];
-    this.calcLdm = [];
-    // this.li = this.li;
+    this.calcLdm = 0;
+
     document
       .getElementById("add")
       .addEventListener("click", this.addData.bind(this));
@@ -24,7 +24,8 @@ class Add extends Remove {
 
       this.li = document.createElement("li");
       this.li.classList.add(this.dimensions.length - 1);
-      this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2} <button>Usuń</button>`;
+      this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2}`;
+      // this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2} <button>Usuń</button>`;
       quantity.appendChild(this.li);
 
       this.remove();
@@ -40,10 +41,8 @@ class Add extends Remove {
       const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
 
       if (id === this.dimensions.length) {
-        this.calcLdm.push(actualLdm);
-        console.log(actualLdm);
-        console.log("DIM", this.dimensions);
-        console.log("CALC", this.calcLdm);
+        this.calcLdm = this.calcLdm + actualLdm;
+        console.log(this.calcLdm);
       }
     });
   };

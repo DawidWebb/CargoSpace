@@ -11,7 +11,6 @@ class Data extends Add {
     document
       .getElementById("clear")
       .addEventListener("click", this.clearAll.bind(this));
-    document.getElementById("free");
   }
 
   clearAll() {
