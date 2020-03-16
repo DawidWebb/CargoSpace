@@ -19,6 +19,7 @@ class Data extends Add {
     this.calcLdm = [];
     this.dimensions = [];
     quantity.innerHTML = `<p>Załadowałeś:</p>`;
-    free.innerHTML = `   <p>Pozostało miejsca:</p>`;
+    freeSpan.textContent = "";
+    freeSpan2.textContent = "";
   }
 }

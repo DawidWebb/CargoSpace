@@ -12,12 +12,18 @@ class Calc extends Data {
   }
 
   btnHandling() {
+    this.doubleStock();
     const leftLdm = this.totalLdm - this.calcLdm;
 
     this.leftLdm(leftLdm);
-    console.log(leftLdm);
   }
-
+  doubleStock = () => {
+    if (quantity5.checked === true) {
+      2;
+    } else {
+      1;
+    }
+  };
   leftLdm = leftLdm => {
     if (this.calcLdm > 0) {
       freeSpan.textContent = `${leftLdm.toFixed(2)} Ldm `;

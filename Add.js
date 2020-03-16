@@ -1,14 +1,25 @@
 class Add extends Remove {
   constructor(props) {
     super(props);
+
     this.dimensions = [];
     this.calcLdm = 0;
+    this.double = 1;
 
     document
       .getElementById("add")
       .addEventListener("click", this.addData.bind(this));
-    document.getElementById("quantity5");
+    // document
+    //   .getElementById("quantity5")
+    //   .addEventListener("change", this.doubleStock);
   }
+  // doubleStock = () => {
+  //   if (quantity5.checked === true) {
+  //     this.double = 2;
+  //   } else {
+  //     this.double = 1;
+  //   }
+  // };
   addData() {
     if (quantity4.value >= 1) {
       const dimension = {
@@ -24,7 +35,6 @@ class Add extends Remove {
       this.li = document.createElement("li");
       this.li.classList.add(this.dimensions.length - 1);
       this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2}`;
-      // this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2} <button>Usuń</button>`;
       quantity.appendChild(this.li);
 
       this.remove();
@@ -38,7 +48,9 @@ class Add extends Remove {
   addLdm = () => {
     this.dimensions.forEach(element => {
       const { id, dim1, dim2, dim3, dim4 } = element;
-      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
+      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4 / this.double;
+      console.log(actualLdm);
+
       if (id === this.dimensions.length) {
         this.calcLdm = this.calcLdm + actualLdm;
       }
