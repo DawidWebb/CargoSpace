@@ -12,7 +12,7 @@ class Calc extends Data {
   }
 
   btnHandling() {
-    this.doubleStock();
+    // this.doubleStock();
     const leftLdm = this.totalLdm - this.calcLdm;
 
     this.leftLdm(leftLdm);
