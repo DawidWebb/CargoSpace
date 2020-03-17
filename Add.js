@@ -4,22 +4,12 @@ class Add extends Remove {
 
     this.dimensions = [];
     this.calcLdm = 0;
-    this.double = 1;
 
     document
       .getElementById("add")
       .addEventListener("click", this.addData.bind(this));
-    // document
-    //   .getElementById("quantity5")
-    //   .addEventListener("change", this.doubleStock);
   }
-  // doubleStock = () => {
-  //   if (quantity5.checked === true) {
-  //     this.double = 2;
-  //   } else {
-  //     this.double = 1;
-  //   }
-  // };
+
   addData() {
     if (quantity4.value >= 1) {
       const dimension = {
@@ -39,16 +29,18 @@ class Add extends Remove {
 
       this.remove();
     } else {
-      alert("Podaj wymagane wymiary...");
+      return alert("Podaj wymagane wymiary...");
     }
     console.log(this.dimensions);
 
     this.addLdm();
   }
   addLdm = () => {
+    this.double = new Double();
+    let number = this.double.doubleStock();
     this.dimensions.forEach(element => {
       const { id, dim1, dim2, dim3, dim4 } = element;
-      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4 / this.double;
+      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4 / number;
       console.log(actualLdm);
 
       if (id === this.dimensions.length) {
