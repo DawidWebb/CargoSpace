@@ -32,16 +32,17 @@ class Add {
     this.addLdm();
   }
   addLdm = () => {
-    // this.double = new Double();
-    // let number = this.double.doubleStock();
+    this.double = new Double();
+    let number = this.double.checkDD();
     this.dimensions.forEach(element => {
       const { id, dim1, dim2, dim3, dim4 } = element;
-      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
+      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4 / number;
       console.log("ACT", actualLdm);
 
       if (id === this.dimensions.length) {
         this.calcLdm = this.calcLdm + actualLdm;
       }
+      quantity5.checked = false;
       console.log("CALC", this.calcLdm);
     });
   };
