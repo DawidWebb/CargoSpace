@@ -1,7 +1,5 @@
-class Add extends Remove {
-  constructor(props) {
-    super(props);
-
+class Add {
+  constructor() {
     this.dimensions = [];
     this.calcLdm = 0;
 
@@ -26,8 +24,6 @@ class Add extends Remove {
       this.li.classList.add(this.dimensions.length - 1);
       this.li.innerHTML = `${dimension.dim4} palet,  o wymiarach ${dimension.dim1} * ${dimension.dim2}`;
       quantity.appendChild(this.li);
-
-      this.remove();
     } else {
       return alert("Podaj wymagane wymiary...");
     }
@@ -36,16 +32,17 @@ class Add extends Remove {
     this.addLdm();
   }
   addLdm = () => {
-    this.double = new Double();
-    let number = this.double.doubleStock();
+    // this.double = new Double();
+    // let number = this.double.doubleStock();
     this.dimensions.forEach(element => {
       const { id, dim1, dim2, dim3, dim4 } = element;
-      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4 / number;
-      console.log(actualLdm);
+      const actualLdm = (dim1 * dim2 * dim4) / 10000 / 2.4;
+      console.log("ACT", actualLdm);
 
       if (id === this.dimensions.length) {
         this.calcLdm = this.calcLdm + actualLdm;
       }
+      console.log("CALC", this.calcLdm);
     });
   };
 }

@@ -16,10 +16,11 @@ class Data extends Add {
   clearAll() {
     this.totalLdm = 13.6;
     this.doubleStock = false;
-    this.calcLdm = [];
+    this.calcLdm = 0;
     this.dimensions = [];
     quantity.innerHTML = `<p>Załadowałeś:</p>`;
     freeSpan.textContent = "";
     freeSpan2.textContent = "";
+    console.log(this.calcLdm);
   }
 }

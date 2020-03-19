@@ -12,28 +12,22 @@ class Calc extends Data {
   }
 
   btnHandling() {
-    // this.doubleStock();
     const leftLdm = this.totalLdm - this.calcLdm;
 
     this.leftLdm(leftLdm);
   }
-  // doubleStock = () => {
-  //   if (quantity5.checked === true) {
-  //     2;
-  //   } else {
-  //     1;
-  //   }
-  // };
+
   leftLdm = leftLdm => {
     if (this.calcLdm > 0) {
       freeSpan.textContent = `${leftLdm.toFixed(2)} Ldm `;
       freeSpan2.textContent = `To około ${Math.floor(
         leftLdm / 0.4
       )} palet euro`;
-    } else {
+    } else if (this.calcLdm === 0) {
       freeSpan.textContent = `13,6Ldm `;
       freeSpan2.textContent = `To około 33 palet euro`;
     }
+    console.log("Przelicz", this.calcLdm, this.totalLdm);
   };
 }
 const calc = new Calc();
